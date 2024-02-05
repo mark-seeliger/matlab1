@@ -1,0 +1,45 @@
+
+%Shashank Thirumale, Mark Seeliger
+%Section 101
+%Matlab Project 1
+
+%% Problem 1
+
+
+A=[1 2 3 -4 3; -3 1 0 -2 5; -5 -3 -6 6 0; -15 -2 -9 4 13]
+
+A(2,:) = 3*A(1,:)+A(2,:)
+A(3,:) = 5*A(1,:)+A(3,:)
+A(4,:) = 15*A(1,:)+A(4,:)
+A(2,:) = 1/7*A(2,:)
+A(1,:) = -2*A(2,:)+A(1,:)
+A(3,:) = -7*A(2,:)+A(3,:)
+A(4,:) = -28*A(2,:)+A(4,:)
+A(1,:) = A(3,:) + A(1,:)
+A(2,:) = -2*A(3,:) + A(2,:)
+A(4,:) = -2*A(3,:) + A(4,:)
+
+A=[1 2 3 -4 3; -3 1 0 -2 5; -5 -3 -6 6 0; -15 -2 -9 4 13]
+A = rref(A)
+
+disp('There is no solution because:')
+disp('the row essentially says 0 = 1')
+disp('which is not true')
+
+%% Problem 2
+A = [1 1 1 1;2 2 2 2;3 3 3 3;4 4 4 4]
+rref(A)
+B = [2 -3 -1 4;-1 2 2 5;1 1 1 7;3 -5 -4 -6]
+rref(B)
+C = [0 0 0 1 25; 1 0 0 5 126;2 0 0 10 5]
+rref(C)
+
+%%Problem 3
+
+%%Problem 4
+
+
+M4 = [4 -3 -4 10; 8 5 2 16; -22 -33 -23 -37;12 2 -2 26]
+rref(M4)
+
+%%Problem 5
