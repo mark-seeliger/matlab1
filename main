@@ -35,28 +35,7 @@ C = [0 0 0 1 25; 1 0 0 5 126;2 0 0 10 5]
 rref(C)
 
 %%Problem 3
-S = [-3 -1 1 -7 0; 4 5 -2 3 0; 2 -2 2 -6 0; 1 4 -1 -4 0; 5 3 1 -11 0]
-rref(S)
-formatSpec = ['a) This is not linearly independent because when I ' ...
-    'row reduced the matrix it does not have a pivot in every ' ...
-    'row so it fails rule 3 of the theorem.'];
-fprintf(formatSpec)
-formatSpec = ['b) There is no way to determine if this is linearly ' ...
-    'independent or not because the 0 vector is always a solution.'];
-fprintf(formatSpec)
 
-S = [-3 -1 1 -7 0;4 5 -2 3 0;2 -2 2 -6 0;1 4 -1 -4 0;5 3 1 -11 0]
-rref(S)
-disp('v1 = -v4')
-disp('v2 = 3v4')
-disp('v3 = 7v4')
-disp('v4 is free')
-syms v1 v2 v3 
-v4_ans = 1
-v1_answer = solve(0 == v1 + v4_ans)
-v2_answer = solve(0 == v2 -3*v4_ans)
-v3_answer = solve(0 == v3 -7*v4_ans)
-disp('3c: -1v1 + 3v2  + 7v3 + 1v4 = 0')
 
 %%Problem 4
 
@@ -70,15 +49,36 @@ disp('a linear combination is linearly dependant if and only if')
 disp('at least one vector is a linear combination of another')
 disp('so, the above set is Linearly Dependent')
 
-%%Problem 5
+%% Problem 5
 S = [-1 5 -4 -7; 1 5 22 13; -3 5 -15 -22; 1 5 -8 3]
 rref(S)
+formatSpec = ['a) Yes'];
+fprintf(formatSpec)
+
 S = [-7 5 -4 -1; 13 5 22 1; -22 5 -15 -3; 3 5 -8 1]
 rref(S)
+formatSpec = ['b) Yes'];
+fprintf(formatSpec)
+
 S = [-7 -1 -4 5; 13 1 22 5; -22 -3 -15 5; 3 1 -8 5]
 rref(S)
-formatSpec = ['e) This linearly independent. This set satisfies' ...
-    'all parts of the theorem because every row has a pivot ' ...
-    'when made into an augmented matrix. This means that one' ...
-    'vector cannot be created by a combination of the other vectors.'];
+formatSpec = ['c) No'];
+fprintf(formatSpec)
+
+S = [-7 -1 5 -4; 13 1 5 22; -22 -3 5 -15; 3 1 5 -8]
+rref(S)
+formatSpec = ['d) Yes'];
+fprintf(formatSpec)
+
+formatSpec = ['e) This is linearly dependent. vector v1, v2, v4' ...
+    'can be created with a linear combination of the other vectors.' ...
+    'The theorem states that a set is linearly dependent if at least ' ...
+    'one vector in the set is a linear comvination of the '];
+fprintf(formatSpec)
+
+formatSpec = ['f) If we tested only vector v3 we would not be able' ...
+    'to come to any conclusions because v3 shows that it is not ' ...
+    'a linear combinations of the other vectors but we need to' ...
+    'prove that all of vectors cannot be expressed as a linear ' ...
+    'combination of the other vectors.'];
 fprintf(formatSpec)
