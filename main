@@ -63,6 +63,12 @@ disp('3c: -1v1 + 3v2  + 7v3 + 1v4 = 0')
 
 M4 = [4 -3 -4 10; 8 5 2 16; -22 -33 -23 -37;12 2 -2 26]
 rref(M4)
+disp('(203/22)v1 - (224/11)v2 + 22v3 = z')
+disp('(357/22)v1 - (1764/11)v2 + 44v3 = z')
+disp('We know that the set of vectors is linearly dependent because:')
+disp('a linear combination is linearly dependant if and only if')
+disp('at least one vector is a linear combination of another')
+disp('so, the above set is Linearly Dependent')
 
 %%Problem 5
 S = [-1 5 -4 -7; 1 5 22 13; -3 5 -15 -22; 1 5 -8 3]
