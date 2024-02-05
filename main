@@ -35,7 +35,27 @@ C = [0 0 0 1 25; 1 0 0 5 126;2 0 0 10 5]
 rref(C)
 
 %%Problem 3
-
+S = [-3 -1 1 -7 0; 4 5 -2 3 0; 2 -2 2 -6 0; 1 4 -1 -4 0; 5 3 1 -11 0]
+rref(S)
+formatSpec = ['a) This is not linearly independent because when I ' ...
+    'row reduced the matrix it does not have a pivot in every ' ...
+    'row so it fails rule 3 of the theorem.'];
+fprintf(formatSpec)
+formatSpec = ['b) There is no way to determine if this is linearly ' ...
+    'independent or not because the 0 vector is always a solution.'];
+fprintf(formatSpec)
+S = [-3 -1 1 -7 0;4 5 -2 3 0;2 -2 2 -6 0;1 4 -1 -4 0;5 3 1 -11 0]
+rref(S)
+disp('v1 = -v4')
+disp('v2 = 3v4')
+disp('v3 = 7v4')
+disp('v4 is free')
+syms v1 v2 v3 
+v4_ans = 1
+v1_answer = solve(0 == v1 + v4_ans)
+v2_answer = solve(0 == v2 -3*v4_ans)
+v3_answer = solve(0 == v3 -7*v4_ans)
+disp('3c: -1v1 + 3v2  + 7v3 + 1v4 = 0')
 
 %%Problem 4
 
