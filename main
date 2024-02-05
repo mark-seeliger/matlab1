@@ -55,3 +55,14 @@ M4 = [4 -3 -4 10; 8 5 2 16; -22 -33 -23 -37;12 2 -2 26]
 rref(M4)
 
 %%Problem 5
+S = [-1 5 -4 -7; 1 5 22 13; -3 5 -15 -22; 1 5 -8 3]
+rref(S)
+S = [-7 5 -4 -1; 13 5 22 1; -22 5 -15 -3; 3 5 -8 1]
+rref(S)
+S = [-7 -1 -4 5; 13 1 22 5; -22 -3 -15 5; 3 1 -8 5]
+rref(S)
+formatSpec = ['e) This linearly independent. This set satisfies' ...
+    'all parts of the theorem because every row has a pivot ' ...
+    'when made into an augmented matrix. This means that one' ...
+    'vector cannot be created by a combination of the other vectors.'];
+fprintf(formatSpec)
