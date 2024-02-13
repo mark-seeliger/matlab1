@@ -34,18 +34,18 @@ rref(B)
 C = [0 0 0 1 25; 1 0 0 5 126;2 0 0 10 5]
 rref(C)
 
-%%Problem 3
+%% Problem 3
 S = [-3 -1 1 -7 0; 4 5 -2 3 0; 2 -2 2 -6 0; 1 4 -1 -4 0; 5 3 1 -11 0]
 rref(S)
-formatSpec = ['a) For set S to be considered Linear Independent' ...
-    'c1v1 + c2v2 + c3v3 + c4v4 = 0. The equation should be ' ...
-    'considered true only if c1=c2=c3=c4=0'];
-fprintf(formatSpec)
-formatSpec = ['b) There is no way to determine if this is linearly ' ...
-    'independent or not because the 0 vector is always a solution.' ...
-    'we know that if the 0 vector is the only solution then this is' ...
-    'a linearly independent set but we do not have that information' ...
-    'so we can not conclude anything.'];
+disp('a) For set S to be considered Linear Independent')
+disp('c1v1 + c2v2 + c3v3 + c4v4 = 0. The equation should be considered')
+disp('true only if c1=c2=c3=c4=0')
+
+disp('b) There is no way to determine if this is linearly independent or') 
+disp('not because the 0 vector is always a solution. We know that if the')
+disp(' 0 vector is the only solution then this is a linearly independent')
+disp('set but we do not have that information so we can not conclude')
+disp('anything.')
 fprintf(formatSpec)
 S = [-3 -1 1 -7 0;4 5 -2 3 0;2 -2 2 -6 0;1 4 -1 -4 0;5 3 1 -11 0]
 rref(S)
@@ -60,48 +60,46 @@ v2_answer = solve(0 == v2 -3*v4_ans)
 v3_answer = solve(0 == v3 -7*v4_ans)
 disp('3c: -1v1 + 3v2  + 7v3 + 1v4 = 0')
 
-%%Problem 4
+%% Problem 4
 
 
-M4 = [4 -3 -4 10; 8 5 2 16; -22 -33 -23 -37;12 2 -2 26]
+M4 = [4 -3 -4 10 0; 8 5 2 16 0; -22 -33 -23 -37 0; 12 2 -2 26 0]
 rref(M4)
 disp('(203/22)v1 - (224/11)v2 + 22v3 = z')
 disp('(357/22)v1 - (1764/11)v2 + 44v3 = z')
 disp('We know that the set of vectors is linearly dependent because:')
-disp('a linear combination is linearly dependant if and only if')
+disp('a set of vector is linearly dependant if and only if')
 disp('at least one vector is a linear combination of another')
 disp('so, the above set is Linearly Dependent')
 
 %% Problem 5
+S = [-7 -1 5 -4; 13 1 5 22; -22 -3 5 -15; 3 1 5 -8]
+
 S = [-1 5 -4 -7; 1 5 22 13; -3 5 -15 -22; 1 5 -8 3]
 rref(S)
-formatSpec = ['a) Yes'];
-fprintf(formatSpec)
+disp('a) Yes')
 
 S = [-7 5 -4 -1; 13 5 22 1; -22 5 -15 -3; 3 5 -8 1]
 rref(S)
-formatSpec = ['b) Yes'];
-fprintf(formatSpec)
+disp('b) Yes')
 
 S = [-7 -1 -4 5; 13 1 22 5; -22 -3 -15 5; 3 1 -8 5]
 rref(S)
-formatSpec = ['c) No'];
-fprintf(formatSpec)
+disp('c) No')
 
 S = [-7 -1 5 -4; 13 1 5 22; -22 -3 5 -15; 3 1 5 -8]
 rref(S)
-formatSpec = ['d) Yes'];
-fprintf(formatSpec)
+disp('d) Yes')
 
-formatSpec = ['e) This is linearly dependent. vector v1, v2, v4' ...
-    'can be created with a linear combination of the other vectors.' ...
-    'The theorem states that a set is linearly dependent if at least ' ...
-    'one vector in the set is a linear comvination of the '];
-fprintf(formatSpec)
+disp('e) This is linearly dependent. vector v1, v2, v4')
+disp('can be created with a linear combination of the other vectors.')
+disp('The theorem states that a set is linearly dependent if at least ')
+disp('one vector can be created with a linear combination of the other')
+disp('set of vectors. So based on this theorem this is linearly')
+disp('independent')
 
-formatSpec = ['f) If we tested only vector v3 we would not be able' ...
-    'to come to any conclusions because v3 shows that it is not ' ...
-    'a linear combinations of the other vectors but we need to' ...
-    'prove that all of vectors cannot be expressed as a linear ' ...
-    'combination of the other vectors.'];
-fprintf(formatSpec)
+disp('f) If we tested only vector v3 we would not be able')
+disp('to come to any conclusions because v3 shows that it is not ')
+disp('a linear combinations of the other vectors but we need to')
+disp('prove that all of vectors cannot be expressed as a linear ')
+disp('combination of the other vectors.')
