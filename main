@@ -46,7 +46,6 @@ disp('not because the 0 vector is always a solution. We know that if the')
 disp(' 0 vector is the only solution then this is a linearly independent')
 disp('set but we do not have that information so we can not conclude')
 disp('anything.')
-fprintf(formatSpec)
 S = [-3 -1 1 -7 0;4 5 -2 3 0;2 -2 2 -6 0;1 4 -1 -4 0;5 3 1 -11 0]
 rref(S)
 disp('v1 = -v4')
